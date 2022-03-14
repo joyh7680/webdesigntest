@@ -1,0 +1,7 @@
+.clear {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+/* c c c d  */

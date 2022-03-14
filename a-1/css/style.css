@@ -1,0 +1,136 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; box-sizing: border-box;} /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } table { border-collapse: collapse; border-spacing: 0;}
+
+a {text-decoration: none; color: inherit;}
+img {vertical-align: top;
+border: 0;}
+input,button,select {box-sizing: border-box; font: inherit;}
+
+/* 추가  */
+ul {
+	list-style: none;
+}
+
+.clearfix::after {
+	display: table;
+	content: "";
+	clear: both;
+
+}
+body {
+	color: #333333;
+}
+.wrap {
+	width: 1200px;
+	margin: 0 auto;
+}
+/*s: header  */
+header {
+	width: 100%;
+	height: 100px;
+	/* background: rebeccapurple; */
+	/* header 한테 relative를 줘야 z index 값이 먹힘  */
+	position: relative;
+	z-index: 10;
+}
+header h1 {
+	/* header 한테 clearfix  */
+	float: left;
+	width: 200px;
+	padding-top: 30px;
+}
+header nav {
+	/* header 한테 clearfix  */
+	float: right;
+	width: 700px;
+	padding-top: 30px;
+}
+/* .gnb 로만 쓰지 말것 주의  */
+header nav ul.gnb {
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	background: #fff;
+
+}
+/* > 꺽쇄 꼭 바로 아래 자식만  */
+header nav ul.gnb>li {
+	width: 25%;
+	/* ul gnb 한테 clearfix  */
+	float: left;
+}
+/* @ a 에 주면 안됌 ! 주의  */
+/* header nav ul.gnb>li>a:hover {} */
+header nav ul.gnb>li:hover>a {
+	background: rebeccapurple;
+	color: #fff;
+}
+header nav ul.gnb>li>a {
+	font-size: 22px;
+	display: block;
+	height: 100%;
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+}
+/* a랑 ul.sub이랑 형제  */
+header nav ul.gnb>li>ul.sub {
+	width: 100%;
+	line-height: 40px;
+	/* 안보여야하는 메뉴  */
+	display: none;
+}
+header nav ul.gnb>li>ul.sub>li {
+	width: 100%;
+	/* height:  는 li 한테만 줘야된대 ; */
+	/* @ 왜지 ?  똑같은데 */
+	height: 40px;
+	/* line-height: 40px; */
+}
+header nav ul.gnb>li>ul.sub>li:hover >a{
+	background: rebeccapurple;
+	color: #fff;
+}
+header nav ul.gnb>li>ul.sub>li >a{
+	display: block;
+	height: 100%;
+	width: 100%;
+
+}
+
+
+/* e: header  */
+.slide {
+	width: 100%;
+	height: 300px;
+	background: red;
+	position: relative;
+}
+/* @ 굳이 둘다 이렇게 줘야돼 ?  */
+.slide .slide_all {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 300px;
+
+}
+.slide .slide_all li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 300px;
+}
+.contents {
+	width: 100%;
+	height: 200px;
+	background: orange;
+}
+.footer {
+	width: 100%;
+	height: 100px;
+	background: yellow;
+}
