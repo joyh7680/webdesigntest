@@ -1,0 +1,83 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+img {vertical-align: top;}
+
+ul,li {list-style: none;}
+
+a {color: inherit; text-decoration: none;}
+
+
+
+.clearfix {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+body {color: #333333; width: 1200px; margin: 0 auto;}
+
+/* s : header  */
+
+header {width: 100%; height: 100px;
+	 /* overflow: hidden; */
+	 z-index: 10;
+	 position: relative;
+	}
+header h1 {width: 200px; 
+	/* height: 40px;  */
+	padding-top: 30px; float: left;}
+/* header h1 a {display: block; height: 100%;}
+header h1 a img {width: 100%;} */
+header nav {width: 800px; padding-top: 30px; float: right; }
+header nav ul.gnb {
+	width: 100%; text-align: center; background: #fff;
+	 /* overflow: hidden; */
+	  box-sizing: border-box; border: 1px solid #ccc;
+}
+header nav ul.gnb > li{
+	float: left; width: 25%;
+	/* 이미지슬라이드 다 만든뒤에 site map menu 에 따라서 슬라이드 내려올때  */
+	position: relative;  height: 40px; 
+ }
+header nav ul.gnb > li:hover >a {background: rebeccapurple; color: #fff;}
+header nav ul.gnb > li > a{display: block; height: 100%; font-size: 22px; font-weight:bold;line-height: 40px;}
+header nav ul.gnb > li > ul.snb{
+	width: 100%;box-sizing: border-box; border: 1px solid #ccc; display: none;
+		/* 이미지슬라이드 다 만든뒤에 site map menu 에 따라서 슬라이드 내려올때  */
+		/*header nav ul.gnb > li{ position: relative; }*/
+		position: absolute;
+		left: 0;
+		top: 40px;
+		/* @  */
+		background: #fff;
+		z-index: 10;
+		height: 160px;
+}
+header nav ul.gnb > li > ul.snb > li{
+	width: 100%; height: 40px; line-height: 40px;
+	
+}
+header nav ul.gnb > li > ul.snb > li:hover > a  {background: rebeccapurple; color: #fff;}
+header nav ul.gnb > li > ul.snb > li > a {display: block; height: 100%; font-size: 18px;}
+
+/* e: header  */
+
+
+/* slide  */
+.slide {width: 100%; height: 300px; 
+	position: relative;
+	/* @  */
+	overflow: hidden;
+}
+
+	/* @  둘다한테 absolute 줘야해....? */ 
+.slide .slide_list {width: 100%; height: 100%; 
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.slide .slide_list li {
+	width: 100%; height: 100%;
+	 position: absolute; top: 0; left: 0;
+	}
+.slide .slide_list li a {display: block; height: 100%;}
