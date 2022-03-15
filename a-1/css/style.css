@@ -60,6 +60,11 @@ header nav ul.gnb>li {
 	width: 25%;
 	/* ul gnb 한테 clearfix  */
 	float: left;
+
+	/* img slide 가 자동으로 밑으로 떨어지기때문에  */
+	/* sub menu list 들이 position:  a b 이 되어야하므로 ; */
+	position: relative;
+
 }
 /* @ a 에 주면 안됌 ! 주의  */
 /* header nav ul.gnb>li>a:hover {} */
@@ -81,6 +86,15 @@ header nav ul.gnb>li>ul.sub {
 	line-height: 40px;
 	/* 안보여야하는 메뉴  */
 	display: none;
+
+		/* img slide 가 자동으로 밑으로 떨어지기때문에  */
+	/* sub menu list 들이 position:  a b 이 되어야하므로 ; */
+	position: absolute;
+	top: 45px;
+	left: 0;
+	background: #fff;
+	height: 160px;
+	border: 1px solid #ccc;
 }
 header nav ul.gnb>li>ul.sub>li {
 	width: 100%;
@@ -107,6 +121,7 @@ header nav ul.gnb>li>ul.sub>li >a{
 	height: 300px;
 	background: red;
 	position: relative;
+	overflow: hidden;
 }
 /* @ 굳이 둘다 이렇게 줘야돼 ?  */
 .slide .slide_all {
@@ -117,13 +132,14 @@ header nav ul.gnb>li>ul.sub>li >a{
 	height: 300px;
 
 }
-.slide .slide_all li {
+.slide .slide_all > li {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 300px;
 }
+.slide .slide_all > li  img {display: block;}
 .contents {
 	width: 100%;
 	height: 200px;
