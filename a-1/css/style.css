@@ -140,13 +140,140 @@ header nav ul.gnb>li>ul.sub>li >a{
 	height: 300px;
 }
 .slide .slide_all > li  img {display: block;}
+
+
+/* s:  contents  */
 .contents {
 	width: 100%;
 	height: 200px;
-	background: orange;
+	/* background: orange; */
+	overflow: hidden;
 }
+.contents section {
+	float: left;
+	/* -> content:  에 clearfix 줘야함 ; */
+	}
+.contents .notice_gal{
+	width: 500px;
+	height: 200px;
+	/* h100%?  */
+
+	/* 공지랑 갤러리 겹치게 기준  */
+	position: relative;
+}
+.contents .notice_gal h3{
+	/* 공지랑 갤러리 겹치게 하고 띄우기  */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	background: #ccc;
+	text-align: center;
+	/* 잊지않긔  */
+	cursor: pointer; 
+	/* link 바로가기 h2 랑 크기 맞춰주는게 좋음  */
+	font-size: 20px;
+}
+
+/* 갤러리 탭메뉴 왼쪽 공간 비우기  */
+/* 나였으면 nth chlide2 last child 이요해서 하지  */
+.contents .notice_gal h3.l_100 {
+	left: 100px;
+}
+
+/* 탭메뉴 색깔 한개 포인트 주기  */
+/* 일단 js 하기 전에 표시하려고 해주는거  */
+.contents .notice_gal h3.on {
+	background: red;
+	color: #ccc;
+   }
+   /* html 가서 on 주기  */
+
+
+
+.contents .notice_gal ul {
+		/* 공지랑 갤러리 겹치게 하고 띄우기  */
+	position: absolute;
+	/* h3 밑으로 가게 top 30  */
+	top: 30px;
+	left: 0;
+	/* 우선은 안보이게  */
+	display: none;
+}
+/* js  */
+.contents .notice_gal ul.on {
+	display: block;
+}
+.contents .notice_gal ul.notice{
+	width: 100%;
+}
+.contents .notice_gal ul.notice li {
+	width: 100%;
+	height: 28px;
+	line-height: 28px;
+	/* day 오른쪽 absol 부모  */
+	position: relative;
+}
+
+.contents .notice_gal ul li a {display: block; height: 100%;}
+.contents .notice_gal ul li a:hover {
+	color: #ccc;
+}
+/* .contents .notice_gal .notice li a {} */
+.contents .notice_gal .notice li a .day {
+	/* 오른쪽으로 배치  */
+	position: absolute;
+	top: 0;
+	right: 10px;
+	font-size: 12px;
+}
+.contents .notice_gal ul.gallery {
+	width: 100%;
+}
+
+.contents .notice_gal ul.gallery li {
+	float: left;
+	padding-top: 35px;
+	margin: 0 30px;
+	/* width: 100px; */
+	/* height: 100px; */
+}
+.contents .notice_gal ul.gallery li a {display: block; height: 100%;}
+/* .contents .notice_gal ul.gallery li  a img {width: 100px; height: 100px; object-fit: cover;} */
+
+.contents .banner {
+	width: 350px;
+	/* @ h 100% ?  */
+	height: 200px;
+}
+.contents .banner  h2 {}
+.contents .banner  h2  a {display: block; height: 100%;}
+.contents .banner  h2  a img {}
+.contents .link {
+	width: 350px;
+	/* @ h 100% ?  */
+	height: 200px;
+}
+.contents .link h2 {
+	background:red;
+	color: #ccc;
+
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 20px;
+	text-align: center;
+}
+.contents .link h3 a {display: block; height: 100%;}
+
+
 .footer {
 	width: 100%;
 	height: 100px;
 	background: yellow;
 }
+
+
+/* youtube 27:42  */
