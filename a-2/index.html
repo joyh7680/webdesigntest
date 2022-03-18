@@ -10,12 +10,24 @@
 
     <!-- 응 스크립트 여기에 쓰는거 맞아~!  -->
     <script src="js/jquery.min.js"></script>
-    <script src="js/custom.js"></script>
+    <!-- <script src="js/custom.js"></script> -->
+    <script src="js/practice02.js"></script>
 </head>
 <body>
-    <header>
-        <h1 class="logo"><a href="#"><img src="images/logo.jpg" alt=""></a></h1>
-        <div class="tab_menu">
+
+     <!-- pop up 은 왜 안만드니 ??  -->
+     <!-- 모달 레이어 팝업창(Modal Layer Pop_up)이 나타나며, -->
+     <div class="modal">
+        <h2 class="title"> 타이틀 </h2>
+        <p>text </p>
+        <button>x 닫기</button>
+    </div>
+
+    <header class="clearfix">
+        <!-- alt 안씀  -->
+        <h1 class="logo"><a href="#"><img src="images/logo.png" alt="Green 복지재단"></a></h1>
+        <!-- div 아니고 nav  -->
+        <!-- <div class="tab_menu">
             <ul class="main_menu">
                 <li>
                     <a href="#">재단소개</a>
@@ -50,52 +62,87 @@
                     </ul>
                 </li>
             </ul>
-        </div>
+        </div> -->
+
+        <nav>
+
+            <!-- ??? 이게 왜 있는거야 ?  -->
+             <!-- 응 이게 맞아 닥치고 이걸로해  -->
+            <div class="nav_bg"></div>
+            <!-- <ul class="main_menu"> -->
+            <!-- main menu 아니고 gnb!!!!!!  -->
+
+            <!-- 구조는 잘 짰는데 gnb , sub 기억하자  -->
+            <ul class="gnb clearfix">
+                <li><a href="#">재단소개</a>
+                    <!-- <ul class="sub_menu"> -->
+                    <ul class="sub">
+                        <li><a href="#">설립취지</a></li>
+                        <li><a href="#">연혁</a></li>
+                        <li><a href="#">찾아오시는길</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">후원하기</a>
+                    <ul class="sub">
+                        <li><a href="#">국내후원</a></li>
+                        <li><a href="#">국외후원</a></li>
+                        <li><a href="#">맞춤후원</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">자료실</a>
+                    <ul class="sub">
+                        <li><a href="#">서식자료실</a></li>
+                        <li><a href="#">사진자료실</a></li>
+                        <li><a href="#">후원양식</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">스토리</a>
+                    <ul class="sub">
+                        <li><a href="#">웹진</a></li>
+                        <li><a href="#">보고서</a></li>
+                        <li><a href="#">나의 후원</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
     </header>
-    <main>
-        <!-- @ 여기 어떻게 햇지 -->
-        <div class="img_slide">
-            <img src="images/banner1.jpg" alt="이미지01">
-            <img src="images/banner2.jpg" alt="이미지02">
-            <img src="images/banner3.jpg" alt="이미지03">
-        </div>
-        <div class="contents">
-            <div class="notice">
-                <h3>공지사항</h3>
-                <ul>
-                    <li>
-                        <a href="#"><p>쩜오링크입니다</p><span>2019-07-07</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><p>쩜오링크입니다</p><span>2019-07-07</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><p>쩜오링크입니다</p><span>2019-07-07</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><p>쩜오링크입니다</p><span>2019-07-07</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><p>쩜오링크입니다</p><span>2019-07-07</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><p>쩜오링크입니다</p><span>2019-07-07</span></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="gallery">
-                <h3>갤러리</h3>
-                <ul>
-                    <li><a href="#"><img src="images/gal1.jpg" alt="모자1"></a></li>
-                    <li><a href="#"><img src="images/gal2.jpg" alt="모자2"></a></li>
-                    <li><a href="#"><img src="images/gal3.jpg" alt="모자3"></a></li>
-                </ul>
-            </div>
-            <div class="banner">
-                <img src="images/banner_zone.jpg" alt="더원">
-            </div>
-        </div>
-    </main>
+
+  <!-- main 아니고 ul, div 로나누기  -->
+     <!-- 이미지슬라이드는 그냥 ul. li 로 한다  -->
+
+   <!-- @ 여기는 왜 bg 로 했지 ?? 그럴필요 없을 것같은데  -->
+   <!-- 일단 나는 html 에 이미지로 해보는걸로 ...  -->
+    <ul class="slide">
+        <li><a href="#"><img src="images/banner1.jpg" alt="진실의 눈과머리"></a></li>
+        <li><a href="#"><img src="images/banner2.jpg" alt="아수라장"></a></li>
+        <li><a href="#"><img src="images/banner3.jpg" alt="death note"></a></li>
+    </ul>
+   
+    <div class="contents">
+        <section class="notice">
+            <h3>공지사항</h3>
+            <ul>
+                <li><a href="#">쩜오 링크입니다 <span class="day">2019-07-07</span></a></li>
+                <li><a href="#">세월호레퀴엠2-집단최면을 일으킨 흑마술의 비법 <span class="day">2019-02-26</span></a></li>
+                <li><a href="#">세월호레퀴엠1-고의침몰설에서 배제된 유력한 용의자.... <span class="day">2016-02-24</span></a></li>
+                <li><a href="#">한국에서 일어나고 있는 개병신같은 자살사건 및 범죄... <span class="day">2014-03-06</span></a></li>
+                <li><a href="#">장기적출과 인육,그리고 개중국의 위협에 대한 글 목록... <span class="day">2013-11-29</span></a></li>
+                <li><a href="#">스모그, PM2.5, AQI 정보 사이트 <span class="day">2013-11-24</span></a></li>
+            </ul>
+        </section>
+        <section class="gallery">
+            <h3>갤러리</h3>
+            <ul>
+                <li><a href="#"><img src="images/gal1.jpg" alt="비니1"></a></li>
+                <li><a href="#"><img src="images/gal2.jpg" alt="비니2"></a></li>
+                <li><a href="#"><img src="images/gal3.jpg" alt="비니3"></a></li>
+            </ul>
+        </section>
+        <section class="banner">
+            <a href=""><img src="images/banner_zone.jpg" alt="The one"></a>
+        </section>
+    </div>
     <footer>
         <h1 class="logo"><a href="#"><img src="images/logo_g.png" alt="로고"></a></h1>
         <address class="copyright">
@@ -106,20 +153,13 @@
             </p>
         </address>
         <div class="cite">
-            <a href="#">
-                <!-- @ p 안써도 되나 ? -->
-                패밀리사이트
-                <ul>
-                    <li><a href="#">네이버</a></li>
-                    <li><a href="">티스토리</a></li>
-                    <li><a href="">다음</a></li>
-                </ul>
-            </a>
+            <a href="#">패밀리사이트 <i >&dtrif;</i></a>
+            <ul>
+                <li><a href="#">네이버</a></li>
+                <li><a href="">티스토리</a></li>
+                <li><a href="">다음</a></li>
+            </ul>
         </div>
     </footer>
-
-
-
-   
 </body>
 </html>
